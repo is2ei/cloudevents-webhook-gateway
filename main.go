@@ -81,7 +81,7 @@ func newProxyHandler(backend *url.URL, parser webhook.Parser) (*httputil.Reverse
 		}
 
 		if ce.ID == "" {
-			id := uuid.NewV4()
+			id, err := uuid.NewV4()
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "unable to generate event ID: %s\n", err)
 				return
