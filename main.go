@@ -29,7 +29,7 @@ import (
 	"github.com/summerwind/cloudevents-webhook-gateway/webhook/slack"
 )
 
-var (
+const (
 	VERSION = "0.0.1"
 	COMMIT  = "HEAD"
 )
